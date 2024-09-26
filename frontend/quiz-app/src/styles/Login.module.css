@@ -1,0 +1,73 @@
+.main{
+    background-color: #2b71a4;
+    height: 100vh;
+    
+}
+
+.headingTwo {
+    color: #ffffff;
+    font-family: "Inika", sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+
+.heading{
+    color:#ffffff;
+    text-align: center;
+    font-family: "Inika", sans-serif, bold;
+    font-size: 50px;
+    font-weight: bolder;
+
+}
+
+.imageContainer{
+    >img{
+      border-radius: 50%;
+      margin: 10px 50px 50px 100p;
+    }
+  }
+
+  .pageContent {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 3rem auto;
+  }
+
+  .form{
+    width: 360px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    padding: 10px;
+    border-radius: 24px;
+    background-color: #419fd3;
+  }
+
+  .LoginForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 10px;
+  }
+  .btnContainer {
+    align-content: center;
+    display: flex;
+    gap: 10px;
+  
+    justify-content: space-between;
+  }
+
+  .Regbutton {
+    background-color: #a6e2e2; /* Background color */
+    color: #000000; /* Text color */
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Padding for size */
+    font-size: 16px; /* Font size */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor changes to pointer on hover */
+    /* transition: background-color 0.3s ease; Smooth transition for hover */
+    width: 50%;
+    align-items: center;
+    margin: 10px;
+  }

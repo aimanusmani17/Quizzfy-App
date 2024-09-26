@@ -1,0 +1,90 @@
+.heading {
+  text-align: center;
+  color: #ffffff;
+  font-family: "Inika", sans-serif, bold;
+  /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+  font-size: 50px;
+  font-weight: bolder;
+}
+.main {
+  background-color: #2b71a4;
+  height: 100vh;
+}
+
+.headingTwo {
+  color: #ffffff;
+  font-family: "Inika", sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.pageContent {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 3rem auto;
+}
+
+.imageContainer{
+  >img{
+
+    border-radius: 50%;
+  }
+}
+
+.form {
+  width: 360px;
+  /* flex-direction: right; */
+  /* background-color: white; */
+
+  /* margin: auto; */
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  padding: 10px;
+  border-radius: 24px;
+  background-color: #419fd3;
+}
+
+.registerForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+.Regbutton {
+  background-color: #a6e2e2; /* Background color */
+  color: #000000; /* Text color */
+  border: none; /* Remove default border */
+  padding: 10px 20px; /* Padding for size */
+  font-size: 16px; /* Font size */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Cursor changes to pointer on hover */
+  /* transition: background-color 0.3s ease; Smooth transition for hover */
+  width: 50%;
+  align-items: center;
+}
+.btnContainer {
+  align-content: center;
+  display: flex;
+  gap: 10px;
+
+  justify-content: space-between;
+}
+
+.Regbutton:hover {
+  background-color: #2980b9; /* Darker shade on hover */
+}
+
+.errorMessage {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+.successMessage {
+  color: green;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  text-align: center;
+}

@@ -1,0 +1,156 @@
+/* Profile.module.css */
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .userInfo {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .userInfo p {
+    font-size: 1.1rem;
+    margin: 8px 0;
+    color: #555;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .formgroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  
+  .formgroup label {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 5px;
+  }
+  
+  .formgroup input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+  }
+  
+  .formgroup input:focus {
+    border-color: #007bff;
+  }
+  
+  .submitBtn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .submitBtn:hover {
+    background-color: #0056b3;
+  }
+  
+  .deactivation {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .deactivateBtn {
+    background-color: #dc3545;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .deactivateBtn:hover {
+    background-color: #c82333;
+  }
+  
+  /* Responsive Styles */
+  
+  @media (max-width: 768px) {
+    .container {
+      padding: 15px;
+    }
+  
+    .header {
+      font-size: 1.8rem;
+    }
+  
+    h2 {
+      font-size: 1.3rem;
+    }
+  
+    .formgroup label {
+      font-size: 0.9rem;
+    }
+  
+    .formgroup input {
+      padding: 8px;
+      font-size: 0.9rem;
+    }
+  
+    .submitBtn, .deactivateBtn {
+      padding: 10px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header {
+      font-size: 1.5rem;
+    }
+  
+    h2 {
+      font-size: 1.2rem;
+    }
+  
+    .formgroup label {
+      font-size: 0.8rem;
+    }
+  
+    .formgroup input {
+      padding: 7px;
+      font-size: 0.8rem;
+    }
+  
+    .submitBtn, .deactivateBtn {
+      padding: 8px;
+      font-size: 0.8rem;
+    }
+  }
+  

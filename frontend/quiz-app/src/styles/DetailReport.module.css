@@ -1,0 +1,85 @@
+/* DetailReports.module.css */
+
+.reportContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+  }
+  
+  .heading {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .para {
+    font-size: 1.1rem;
+    color: #555;
+    margin: 10px 0;
+  }
+  
+  strong {
+    color: #000;
+  }
+  
+  .viewReportBtn {
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .viewReportBtn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .reportContainer {
+      padding: 15px;
+    }
+  
+    .heading {
+      font-size: 1.5rem;
+    }
+  
+    .para {
+      font-size: 1rem;
+    }
+  
+    .viewReportBtn {
+      padding: 8px 16px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Tablet responsiveness */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .reportContainer {
+      padding: 18px;
+    }
+  
+    .heading {
+      font-size: 1.75rem;
+    }
+  
+    .para {
+      font-size: 1.05rem;
+    }
+  
+    .viewReportBtn {
+      padding: 9px 18px;
+      font-size: 0.95rem;
+    }
+  }
+  

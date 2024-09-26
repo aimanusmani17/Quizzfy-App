@@ -1,0 +1,160 @@
+/* CreateQuiz.module.css */
+
+.editQuiz {
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .heading {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .container {
+    margin-bottom: 15px;
+  }
+  
+  .label {
+    display: block;
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 8px;
+  }
+  
+  /* input[type="text"],
+  input[type="number"], */
+  .quizPrivacy, .quizDiffLevel {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .questionCard {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .questionCard label {
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .quesField {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .options input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    margin-right: 10px;
+  }
+  
+  .addBtn,
+  .rmvBtn {
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .rmvBtn {
+    background-color: #e74c3c;
+  }
+  
+  .addBtn:hover,
+  .rmvBtn:hover {
+    background-color: #0056b3;
+  }
+  
+  .rmvBtn:hover {
+    background-color: #c0392b;
+  }
+  
+  .correctAnswerInput {
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .addQdiv {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .addQue {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .addQue:hover {
+    background-color: #218838;
+  }
+  
+  .btnCreate {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btnCreate:hover {
+    background-color: #218838;
+  }
+  
+  /* Responsive styling */
+  @media (max-width: 768px) {
+    .editQuiz {
+      width: 90%;
+      padding: 15px;
+    }
+  
+    .options {
+      flex-direction: column;
+    }
+  
+    .options input[type="text"] {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+  

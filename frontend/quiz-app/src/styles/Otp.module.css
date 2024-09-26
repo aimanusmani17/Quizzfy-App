@@ -1,0 +1,42 @@
+.main{
+    background-color: #2b71a4;
+    height: 100vh;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.formDiv{
+    display: flex;
+    justify-content: center;  /* Centers the div horizontally */
+    align-items: center;
+}
+
+.form{
+    width: 360px;
+  
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    padding: 10px ;
+    border-radius: 24px;
+    background-color: #419fd3;
+    color: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-evenly; */
+    padding: 10px;
+    justify-content: center;  /* Centers content horizontally */
+    align-items: center;
+}
+
+.btn{
+    background-color: #a6e2e2; /* Background color */
+    color: #000000; /* Text color */
+    border: none; /* Remove default border */
+    padding: 5px 10px; /* Padding for size */
+    font-size: 16px; /* Font size */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor changes to pointer on hover */
+    /* transition: background-color 0.3s ease; Smooth transition for hover */
+    width: 30%;
+    align-items: center;
+}

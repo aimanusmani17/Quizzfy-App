@@ -1,0 +1,133 @@
+.myQuiz {
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1200px;
+    background-color: rgba(250, 235, 215, 0.9); /* Light, translucent background */
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-height: 80vh;
+    overflow-y: auto;
+    overflow-x: visible;
+}
+
+/* Centering and styling the heading */
+.myQuiz h2 {
+    text-align: center;
+    font-size: 2rem; /* Larger font size for the heading */
+    margin-bottom: 20px;
+    color: #333; /* Darker color for better readability */
+}
+
+/* Style for the table */
+.myQuiz table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: left; /* Align content to the left for better readability */
+    background-color: white;
+    border-radius: 8px; /* Slight rounding of table edges */
+    overflow: hidden; /* Prevent overflow on rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Table header styling */
+.myQuiz th {
+    background-color: #f1f1f1;
+    font-weight: bold;
+    padding: 12px;
+    text-align: center; /* Center the text in headers */
+    border-bottom: 2px solid #dad7d7;
+    font-size: 1.2rem;
+}
+
+/* Table body styling */
+.myQuiz td {
+    padding: 12px;
+    border-bottom: 1px solid #dad7d7;
+    text-align: center;
+}
+
+/* Alternating row background color */
+.myQuiz tbody tr:nth-child(even) {
+    background-color: rgba(245, 245, 245, 0.8); /* Light gray */
+}
+
+/* Hover effect on rows */
+.myQuiz tbody tr:hover {
+    background-color: rgba(220, 220, 220, 0.8); /* Slightly darker gray */
+}
+
+/* Button group for action buttons */
+.buttonGroup {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    gap: 10px; /* Spacing between buttons */
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+}
+
+/* Shared button styling */
+.ediBtn, .deleteBtn, .publishBtn, .editbutton, .deletebutton  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Edit button */
+.editbutton {
+    background-color: #354dd7;
+}
+
+.editbutton:hover {
+    background-color: #2d3fb2; /* Darker on hover */
+}
+
+/* Delete button */
+.deletebutton {
+    background-color: #e74c3c;
+}
+
+.deletebutton:hover {
+    background-color: #c0392b; /* Darker on hover */
+}
+
+/* Publish button */
+.publishBtn {
+    background-color: #2ecc71;
+}
+
+.publishBtn:hover {
+    background-color: #27ae60; /* Darker on hover */
+}
+
+/* Disabled buttons for published quizzes */
+.published {
+    background-color: #95a5a6; /* Gray background for disabled buttons */
+    cursor: not-allowed; /* Indicate disabled state */
+}
+
+/* Small tweaks for mobile responsiveness */
+@media (max-width: 768px) {
+    .myQuiz {
+        width: 95%;
+    }
+
+    .myQuiz table,
+    .myQuiz th,
+    .myQuiz td {
+        font-size: 0.9rem; /* Smaller font size for smaller screens */
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
+}
