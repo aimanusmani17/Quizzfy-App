@@ -1,17 +1,17 @@
-.heading {
+/* .heading {
   text-align: center;
   color: #ffffff;
   font-family: "Inika", sans-serif, bold;
   /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
-  font-size: 50px;
+  /* font-size: 50px;
   font-weight: bolder;
 }
 .main {
   background-color: #2b71a4;
   height: 100vh;
-}
+} */
 
-.headingTwo {
+/* .headingTwo {
   color: #ffffff;
   font-family: "Inika", sans-serif;
   font-size: 40px;
@@ -39,18 +39,116 @@
   /* background-color: white; */
 
   /* margin: auto; */
+  /* box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  padding: 10px;
+  border-radius: 24px;
+  background-color: #419fd3;
+} */
+
+/* .registerForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 10px;
+} */
+/* .Regbutton {
+  background-color: #a6e2e2; /* Background color */
+  /* color: #000000; /* Text color */
+  /* border: none; /* Remove default border */
+  /* padding: 10px 20px; 
+  font-size: 16px; 
+  border-radius: 5px; 
+  cursor: pointer;  */
+  /* transition: background-color 0.3s ease; Smooth transition for hover */
+  /* width: 50%;
+  align-items: center; */
+/* }  */
+/* .btnContainer { */
+  /* align-content: center;
+  display: flex;
+  gap: 10px;
+
+  justify-content: space-between;
+} */ */
+
+/* .Regbutton:hover {
+  background-color: #2980b9; /* Darker shade on hover */
+/* }  */
+
+/* .errorMessage {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: -10px;
+  margin-bottom: 10px;
+} */
+
+/* .successMessage {
+  color: green;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  text-align: center;
+}  */
+
+/* General Styles */
+.heading {
+  text-align: center;
+  color: #ffffff;
+  font-family: "Inika", sans-serif, bold;
+  font-size: 50px;
+  font-weight: bolder;
+}
+
+.main {
+  background-color: #2b71a4;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.headingTwo {
+  color: #ffffff;
+  font-family: "Inika", sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.pageContent {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 3rem auto;
+  flex-wrap: wrap; /* Allows content to wrap for responsiveness */
+}
+
+/* Image Container */
+.imageContainer > img {
+  border-radius: 50%;
+  width: 150px; /* Define size for responsiveness */
+  height: 150px;
+  margin: 0 auto;
+}
+
+/* Form Styling */
+.form {
+  width: 360px;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
   padding: 10px;
   border-radius: 24px;
   background-color: #419fd3;
+  margin: 20px;
 }
 
+/* Registration Form */
 .registerForm {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   padding: 10px;
 }
+
+/* Button Styling */
 .Regbutton {
   background-color: #a6e2e2; /* Background color */
   color: #000000; /* Text color */
@@ -59,22 +157,25 @@
   font-size: 16px; /* Font size */
   border-radius: 5px; /* Rounded corners */
   cursor: pointer; /* Cursor changes to pointer on hover */
-  /* transition: background-color 0.3s ease; Smooth transition for hover */
   width: 50%;
   align-items: center;
-}
-.btnContainer {
-  align-content: center;
-  display: flex;
-  gap: 10px;
-
-  justify-content: space-between;
+  margin: 10px auto; /* Center the button */
 }
 
+/* Button Hover */
 .Regbutton:hover {
   background-color: #2980b9; /* Darker shade on hover */
 }
 
+/* Button Container */
+.btnContainer {
+  align-content: center;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+/* Error and Success Messages */
 .errorMessage {
   color: red;
   font-size: 0.9rem;
@@ -87,4 +188,62 @@
   margin-bottom: 20px;
   font-size: 1rem;
   text-align: center;
+}
+
+/* Responsive Media Queries */
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+  .heading {
+    font-size: 40px;
+  }
+
+  .headingTwo {
+    font-size: 30px;
+  }
+
+  .form {
+    width: 300px;
+  }
+
+  .imageContainer > img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .Regbutton {
+    width: 100%; /* Full width on smaller screens */
+    font-size: 14px;
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+  .heading {
+    font-size: 30px;
+  }
+
+  .headingTwo {
+    font-size: 24px;
+  }
+
+  .pageContent {
+    flex-direction: column; /* Stack content vertically on small screens */
+    margin: 1rem auto;
+  }
+
+  .form {
+    width: 100%; /* Form takes full width on mobile */
+    padding: 20px;
+  }
+
+  .imageContainer > img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .Regbutton {
+    font-size: 12px;
+    padding: 8px;
+  }
 }
