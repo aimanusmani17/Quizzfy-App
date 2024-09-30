@@ -18,7 +18,7 @@ app.use(cors({origin:`http://${process.env.CORS_ORIGIN_URL}`,credentials:true}))
 
 const connectionString = process.env.CONNECTION_STRING || "";
 
-const port = process.env.PORT || 4000;
+const port = process.env.PORT ;
 
 app.use(express.json());
 declare global {
