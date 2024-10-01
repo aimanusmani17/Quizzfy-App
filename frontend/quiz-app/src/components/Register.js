@@ -102,7 +102,7 @@ const Register = () => {
       };
 
       axios
-        .post("https://quizzfy-app.onrender.com//auth", data)
+        .post("https://quizzfy-app.onrender.com/auth", data)
         .then((res) => {
           localStorage.setItem('token',res.data.data.token )
           

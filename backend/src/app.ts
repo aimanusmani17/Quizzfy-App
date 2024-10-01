@@ -14,7 +14,7 @@ import clearBlacklistedTokenScheduler from "./utils/clearBlacklistedTokenSchedul
 
 const app = express();
 
-app.use(cors({origin:`https://quizzfy-app.vercel.app/`,credentials:true}))
+app.use(cors({origin:`https://quizzfy-app.vercel.app`,credentials:true}))
 
 const connectionString = process.env.CONNECTION_STRING || "";
 
