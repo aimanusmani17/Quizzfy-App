@@ -105,12 +105,13 @@ const Register = () => {
         .post("https://quizzfy-app.onrender.com//auth", data)
         .then((res) => {
           localStorage.setItem('token',res.data.data.token )
-          console.log(res.data.data.token);
+          
           navigate("/otp");
         })
         .catch((err) => console.log(err));
     }
   };
+
 
   return (
     <div className={RegisterStyles.main}>
