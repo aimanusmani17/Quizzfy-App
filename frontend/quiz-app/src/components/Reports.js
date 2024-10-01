@@ -7,7 +7,7 @@ import axios from "axios";
 const Reports = () => {
   const { reportId } = useParams();
   const [reports, setReports] = useState([]); // Added useState import
-  const [errorMessage, setErrorMessage] = useState(""); // Added useState import
+  const [errorMessage, setErrorMessage] = useState(""); 
 
   useEffect(() => {
     const token = localStorage.getItem("loginToken"); // Get token from localStorage
