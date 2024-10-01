@@ -114,7 +114,7 @@ const Register = () => {
 
   return (
     <div className={RegisterStyles.main}>
-      <h1 className={RegisterStyles.heading}>Quizzify</h1>
+      <h1 className={RegisterStyles.heading}>Quizzfy</h1>
       <div className={RegisterStyles.pageContent}>
         <div className={RegisterStyles.imageContainer}>
           <img src={quizImage} width={400} height={400} alt="Quiz" />
@@ -203,7 +203,7 @@ const Register = () => {
                 Login
               </button>
             </div>
-            <label>Already registered? Then Login</label>
+            <label className={RegisterStyles.confirmLabel}>Already registered? Then Login</label>
           </form>
         </div>
       </div>
