@@ -50,42 +50,71 @@ const Register = () => {
 
   const validateForm = () => {
     let formIsValid = true;
-    const newErrors = {};
+    const validationErrors = {};
 
     // Name validation
-    if (!values.name) {
-      formIsValid = false;
-      newErrors.name = "Please enter your name";
+    // if (!values.name) {
+    //   formIsValid = false;
+    //   newErrors.name = "Please enter your name";
+    // }
+    if (values.name.length < 4) {
+      validationErrors.name = 'Name must be at least 4 characters long.';
+    }
+
+    if (typeof values.name !== "undefined") {
+      if (!values.name.match(/^[a-zA-Z ]*$/ )  ) {
+        formIsValid = false;
+        validationErrors.name = "*Please enter alphabet characters only.";
+      }
+      // console.log(this.state.username.length);
+      if(values.name.charAt(0)===' '){
+        formIsValid = false;
+        // validationErrors["name"] = "*Name cannot be empty.";
+        validationErrors.name = "*Name cannot be empty.";
+      }
+
+      
     }
 
     // Email validation
     if (!values.email) {
       formIsValid = false;
-      newErrors.email = "Please enter your email address";
+      validationErrors.email = "Please enter your email address";
     } else if (!/\S+@\S+\.\S+/.test(values.email)) {
       formIsValid = false;
-      newErrors.email = "Please enter a valid email address";
+      validationErrors.email = "Please enter a valid email address";
     }
 
     // Password validation
+
+    const passwordRegex = /^(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
     if (!values.password) {
       formIsValid = false;
-      newErrors.password = "Please enter a password";
-    } else if (values.password.length < 6) {
-      formIsValid = false;
-      newErrors.password = "Password must be at least 6 characters long";
-    }
+      validationErrors.password = "Please enter a password";
+    } else if (!passwordRegex.test(values.password)) {
+      validationErrors.password= 'Password must be at least 8 characters long and contain at least one special character.';
+    } 
+    // return ''; // No error
+  
+    
+    // (values.password.length < 6) {
+    //   formIsValid = false;
+    //   validationErrors.password = "Password must be at least 6 characters long";
+    // }
+   
+
+    
 
     // Confirm Password validation
     if (!values.confirmPassword) {
       formIsValid = false;
-      newErrors.confirmPassword = "Please confirm your password";
+      validationErrors.confirmPassword = "Please confirm your password";
     } else if (values.password !== values.confirmPassword) {
       formIsValid = false;
-      newErrors.confirmPassword = "Passwords do not match";
+      validationErrors.confirmPassword = "Passwords do not match";
     }
 
-    setErrors(newErrors);
+    setErrors(validationErrors);
     return formIsValid;
   };
 
@@ -93,12 +122,12 @@ const Register = () => {
     event.preventDefault();
     setSubmitted(true);
 
-    if (validateForm()) {
+    // if (validateForm()) {
       const data = {
         name: values.name,
         email: values.email,
         password: values.password,
-        confirmPassword: values.confirmPassword,
+        confirmPassword: values.confirmPassword
       };
 
       axios
@@ -109,7 +138,7 @@ const Register = () => {
           navigate("/otp");
         })
         .catch((err) => console.log(err));
-    }
+    
   };
 
 
@@ -125,7 +154,7 @@ const Register = () => {
           <form className={RegisterStyles.registerForm} onSubmit={handleSubmit}>
             {submitted && (
               <div className={RegisterStyles.successMessage}>
-                <h3>Welcome {values.name}</h3>
+                <h3> {values.name} Registered</h3>
               </div>
             )}
 

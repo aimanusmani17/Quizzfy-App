@@ -10,6 +10,7 @@ const MyQuizzes = () => {
   const [myQuizzes, setMyQuizzes] = useState([]);
 
   useEffect(() => {
+    
     axios
       .get(`http://localhost:3002/quiz`, {
         headers: {
