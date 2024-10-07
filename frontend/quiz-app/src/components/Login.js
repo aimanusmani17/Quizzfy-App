@@ -1,6 +1,7 @@
 
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom"
 import LoginStyles from "../styles/Login.module.css";
 import quizImage from "../assets/quizImg/quizlogin.webp";
 import axios from "axios";
@@ -60,7 +61,7 @@ const Login = () => {
   return (
     <>
       <div className={LoginStyles.main}>
-        <h1 className={LoginStyles.heading}>Login</h1>
+        <h1 className={LoginStyles.heading}>Quizzfy</h1>
         <div className={LoginStyles.pageContent}>
           <div className={LoginStyles.imageContainer}>
             <img src={quizImage} width={400} height={400} alt="Quiz" />
@@ -100,9 +101,17 @@ const Login = () => {
                 <button className={LoginStyles.Regbutton} type="submit">
                   Login
                 </button>
-                <button className={LoginStyles.Regbutton} onClick={() => navigate("/")}>
+                <br />
+                <label className={LoginStyles.confirmLabel}>
+              Already Login? Then {" "}
+              <Link to="/" className={LoginStyles.loginLink}>
+                Register
+              </Link>
+            </label>
+            <br />
+                {/* <button className={LoginStyles.Regbutton} onClick={() => navigate("/")}>
                   Register
-                </button>
+                </button> */}
               </div>
             </form>
           </div>

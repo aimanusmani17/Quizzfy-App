@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom"
 import { useNavigate } from "react-router-dom";
 import RegisterStyles from "../styles/Register.module.css";
 import quizImage from "../assets/quizImg/quiz.jpg";
@@ -142,103 +143,99 @@ const Register = () => {
   };
 
 
-  return (
-    <div className={RegisterStyles.main}>
-      <h1 className={RegisterStyles.heading}>Quizzfy</h1>
-      <div className={RegisterStyles.pageContent}>
-        <div className={RegisterStyles.imageContainer}>
-          <img src={quizImage} width={400} height={400} alt="Quiz" />
-        </div>
-        <div className={RegisterStyles.form}>
-          <h1 className={RegisterStyles.headingTwo}>Register Here</h1>
-          <form className={RegisterStyles.registerForm} onSubmit={handleSubmit}>
-            {submitted && (
-              <div className={RegisterStyles.successMessage}>
-                <h3> {values.name} Registered</h3>
-              </div>
-            )}
+return (
+  <div className={RegisterStyles.main}>
+    <h1 className={RegisterStyles.heading}>Quizzfy</h1>
+    <div className={RegisterStyles.pageContent}>
+      <div className={RegisterStyles.imageContainer}>
+        <img src={quizImage} width={400} height={400} alt="Quiz" />
+      </div>
+      <div className={RegisterStyles.form}>
+        <h1 className={RegisterStyles.headingTwo}>Register Here</h1>
+        <form className={RegisterStyles.registerForm} onSubmit={handleSubmit}>
+          {/* {submitted && ( */}
+            {/* // <div className={RegisterStyles.successMessage}>
+            //   <h3> {values.name} Registered</h3>
+            // </div>
+          // )} */}
 
-            <label htmlFor="name">Name:</label>
-            <input
-              className={RegisterStyles.formField}
-              type="text"
-              placeholder="Enter Name"
-              autoComplete="off"
-              name="name"
-              value={values.name}
-              onChange={handleInputChange}
-            />
-            {errors.name && (
-              <span className={RegisterStyles.errorMessage}>{errors.name}</span>
-            )}
+          <input
+            className={RegisterStyles.formField}
+            type="text"
+            placeholder="Enter Name"
+            autoComplete="off"
+            name="name"
+            value={values.name}
+            onChange={handleInputChange}
+          />
+          {errors.name && (
+            <span className={RegisterStyles.errorMessage}>{errors.name}</span>
+          )}
 
-            <label htmlFor="email">Email:</label>
-            <input
-              className={RegisterStyles.formField}
-              type="email"
-              placeholder="Email"
-              name="email"
-              value={values.email}
-              onChange={handleInputChange}
-            />
-            {errors.email && (
-              <span className={RegisterStyles.errorMessage}>{errors.email}</span>
-            )}
+          <input
+            className={RegisterStyles.formField}
+            type="email"
+            placeholder="Email"
+            name="email"
+            value={values.email}
+            onChange={handleInputChange}
+          />
+          {errors.email && (
+            <span className={RegisterStyles.errorMessage}>{errors.email}</span>
+          )}
 
-            <label htmlFor="password">Password:</label>
-            <input
-              className={RegisterStyles.formField}
-              type="password"
-              placeholder="Password"
-              name="password"
-              value={values.password}
-              onChange={handleInputChange}
-            />
-            {errors.password && (
-              <span className={RegisterStyles.errorMessage}>
-                {errors.password}
-              </span>
-            )}
+          <input
+            className={RegisterStyles.formField}
+            type="password"
+            placeholder="Password"
+            name="password"
+            value={values.password}
+            onChange={handleInputChange}
+          />
+          {errors.password && (
+            <span className={RegisterStyles.errorMessage}>
+              {errors.password}
+            </span>
+          )}
 
-            <label htmlFor="confirmPassword">Confirm Password:</label>
-            <input
-              className={RegisterStyles.formField}
-              type="password"
-              placeholder="Confirm Password"
-              name="confirmPassword"
-              value={values.confirmPassword}
-              onChange={handleInputChange}
-            />
-            {errors.confirmPassword && (
-              <span className={RegisterStyles.errorMessage}>
-                {errors.confirmPassword}
-              </span>
-            )}
+          <input
+            className={RegisterStyles.formField}
+            type="password"
+            placeholder="Confirm Password"
+            name="confirmPassword"
+            value={values.confirmPassword}
+            onChange={handleInputChange}
+          />
+          {errors.confirmPassword && (
+            <span className={RegisterStyles.errorMessage}>
+              {errors.confirmPassword}
+            </span>
+          )}
 
+          <br />
+          <div className={RegisterStyles.btnContainer}>
+            <button
+              className={RegisterStyles.Regbutton}
+              disabled={isDisabled}
+              type="submit"
+            >
+              Register
+            </button>
             <br />
-            <div className={RegisterStyles.btnContainer}>
-              <button
-                className={RegisterStyles.Regbutton}
-                disabled={isDisabled}
-                type="submit"
-              >
-                Submit
-              </button>
-              <br />
-              <button
-                className={RegisterStyles.Regbutton}
-                type="button"
-                onClick={() => navigate("/login")}
-              >
+         
+          </div>
+          {/* <label className={RegisterStyles.confirmLabel}>Already registered? Then Login</label> */}
+          <label className={RegisterStyles.confirmLabel}>
+              Already registered? Then {" "}
+              <Link to="/login" className={RegisterStyles.loginLink}>
                 Login
-              </button>
-            </div>
-            <label className={RegisterStyles.confirmLabel}>Already registered? Then Login</label>
-          </form>
-        </div>
+              </Link>
+            </label>
+        </form>
       </div>
     </div>
-  );
-};
+  </div>
+);
+}
 
 export default Register;

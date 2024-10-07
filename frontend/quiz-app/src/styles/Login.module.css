@@ -91,10 +91,16 @@
 }
 
 .heading {
-  font-size: 2.5rem;
+  /* font-size: 2.5rem;
   margin-bottom: 1.5rem;
   text-align: center;
-  color: white;
+  color: white; */
+
+  text-align: center;
+  color: #ffffff;
+  font-family: "Inika", sans-serif,;
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+  font-size: 80px;
 }
 
 .pageContent {
@@ -102,7 +108,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color:  #2b71a4;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   border-radius: 12px;
@@ -114,7 +120,11 @@
 .imageContainer img {
   max-width: 100%;
   height: auto;
-  border-radius: 12px;
+  border-radius: 30rem;
+}
+.loginLink {
+  color: #c8d6e6; /* Blue color for the link */
+  text-decoration: none; /* Remove underline */
 }
 
 .form {
@@ -128,9 +138,15 @@
 }
 
 .headingTwo {
+  /* font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #555; */
+
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: #555;
+  /* color: #555; */
+  color:white;
+  font-weight: bold;
 }
 
 .LoginForm {
@@ -169,12 +185,13 @@
 .Regbutton {
   padding: 10px 20px;
   font-size: 1rem;
-  background-color: #007bff;
+  background-color: #101418;
   color: white;
   border: none;
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  width: 10rem;
 }
 
 .Regbutton:disabled {

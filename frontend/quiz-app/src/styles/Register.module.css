@@ -189,6 +189,16 @@
   justify-content: center;
 }
 
+.loginLink {
+  color: #c8d6e6; /* Blue color for the link */
+  text-decoration: none; /* Remove underline */
+}
+
+.loginLink:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+
 .Regbutton {
   padding: 10px 20px;
   font-size: 1rem;
@@ -198,6 +208,7 @@
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  width:10rem; 
 }
 
 .Regbutton:disabled {
