@@ -18,7 +18,7 @@ const Exam = () => {
     const userId = localStorage.getItem("userId");
 
     axios
-      .get("http://localhost:3002/quiz/allpublishedquiz/exam", {
+      .get("https://quizzfy-app.onrender.com/quiz/allpublishedquiz/exam", {
         headers: {
           Authorization: `Bearer ${token}`,
         },

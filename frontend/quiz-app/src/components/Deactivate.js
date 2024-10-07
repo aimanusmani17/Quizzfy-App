@@ -11,7 +11,7 @@ const Deactivate = () => {
     const sendOTPHandler = () => {
         axios
           .patch(
-            'http://localhost:3002/user/deactivate',
+            'https://quizzfy-app.onrender.com/user/deactivate',
             {},
             {
               headers: {

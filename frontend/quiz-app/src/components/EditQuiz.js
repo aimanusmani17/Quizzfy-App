@@ -25,7 +25,7 @@ const EditQuiz = () => {
     const token = localStorage.getItem("loginToken");
 
     axios
-      .get(`http://localhost:3002/quiz/${quizId}`, {
+      .get(`https://quizzfy-app.onrender.com/quiz/${quizId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

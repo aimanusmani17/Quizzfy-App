@@ -17,7 +17,7 @@ const StartExam = () => {
 
     if (quizId) {
       axios
-        .get(`http://localhost:3002/exam/${quizId}`, {
+        .get(`https://quizzfy-app.onrender.com/exam/${quizId}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

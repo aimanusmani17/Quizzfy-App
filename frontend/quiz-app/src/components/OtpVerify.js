@@ -131,7 +131,7 @@ const OtpVerify = () => {
     };
     
     axios
-      .post(`http://localhost:3002/auth/verify-registration-otp/${token}`, isValid)
+      .post(`https://quizzfy-app.onrender.com/auth/verify-registration-otp/${token}`, isValid)
       .then((res) => {
         console.log(res);
         navigate("/login");

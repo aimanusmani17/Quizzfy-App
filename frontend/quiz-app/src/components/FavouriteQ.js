@@ -15,7 +15,7 @@ const FavouriteQ = () => {
       }
   
       axios
-        .get('http://localhost:3002/favquestion', {
+        .get('https://quizzfy-app.onrender.com/favquestion', {
           headers: {
             Authorization: `Bearer ${token}`,
           },

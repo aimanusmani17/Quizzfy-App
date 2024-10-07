@@ -108,7 +108,7 @@ const CreateQuiz = () => {
     const token = localStorage.getItem("loginToken");
 
     axios
-      .post(`http://localhost:3002/quiz/`, requestBody, {
+      .post(`https://quizzfy-app.onrender.com/quiz/`, requestBody, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

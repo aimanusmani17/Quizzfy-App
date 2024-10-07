@@ -41,7 +41,7 @@ const Login = () => {
 
       // Make API call to login
       axios
-        .post("http://localhost:3002/auth/login", data)
+        .post("https://quizzfy-app.onrender.com/auth/login", data)
         .then((res) => {
           console.log(res.data.data.token);
           localStorage.setItem('loginToken',res.data.data.token )

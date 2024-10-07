@@ -21,7 +21,7 @@ const DetailReports = () => {
         return;
       }
 
-      axios.get(`http://localhost:3002/report/${reportId}`, {
+      axios.get(`https://quizzfy-app.onrender.com/report/${reportId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
