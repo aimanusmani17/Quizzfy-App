@@ -1,5 +1,67 @@
+.main{
+padding: 20px;
+display: flex;
+flex-direction: column;
+align-items: center;
+background-image: url("../assets/quizImg/quiz-header.webp");
+background-size: cover;
+background-position: center;
+height: 100vh;
+justify-content: center;
+position: relative; /* Allows adjusting position with top property */
+/* top: -20px; Move the container 20px upwards */
+}
+/* Center and adjust the position */
+.container { 
+    position: relative; 
+     top: -20px; 
+     width: 90%;
+    max-width: 1200px; 
+     background-color: rgba(250, 235, 215, 0.9); 
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-height: 80vh;
+    overflow-y: auto;
+    overflow-x: visible;
+  }
+  
+  /* Adjust for mobile responsiveness */
+  @media (max-width: 768px) {
+    .container {
+      top: -10px; /* Move slightly up for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      top: -5px; /* Move slightly up for mobile screens */
+    }
+  }
+  
+.mainHeading {
+    font-family: 'Poppins', sans-serif, 'cursive'; /* Clean, modern font */
+    font-size: 3rem; /* Size for large screens */
+    font-weight: bold;
+    color: #ffffff; /* White text for contrast */
+    text-align: center;
+    background-image: linear-gradient(90deg, #ff8a00, #da1b60); /* Gradient effect */
+    background-clip: text;
+    -webkit-background-clip: text; /* For Safari */
+    color: transparent; /* Transparent text so gradient shows through */
+    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2); /* Adds depth */
+    padding: 20px;
+    margin: 20px 0;
+    letter-spacing: 2px; /* Spacing between letters for elegance */
+    line-height: 1.2;
+    border-bottom: 4px solid rgba(255, 255, 255, 0.3); /* Subtle bottom border */
+    display: inline-block;
+  }
+
+
+
 .myQuiz {
-    margin: 20px auto;
+    /* margin: 20px auto; */
     width: 90%;
     max-width: 1200px;
     background-color: rgba(250, 235, 215, 0.9); /* Light, translucent background */

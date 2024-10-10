@@ -1,15 +1,46 @@
-/* Main container for the Attempt Quiz section */
+.main{
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../assets/quizImg/quiz-header.webp");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  justify-content: center;
+}
 .container {
-    /* background-color: #2b71a4; Themed background */
+   
     background-color: #e2e0effc;
     max-width: 900px;
-    /* margin-top:3rem; */
+   
     margin: 3rem 5rem 5rem 5rem;;
     padding: 20px;
     text-align: center;
     border-radius: 24px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2), 0 5px 5px rgba(0, 0, 0, 0.24);
+    
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2), 0 5px 5px rgba(0, 0, 0, 0.24);
+    padding: 10px;
+    border-radius: 12px;
+    background-color: rgba(65, 159, 211, 0.7);
   }
+
+  .mainHeading{ font-family: 'Poppins', sans-serif, 'cursive'; /* Clean, modern font */
+    font-size: 3rem; /* Size for large screens */
+    font-weight: bold;
+    color: #ffffff; /* White text for contrast */
+    text-align: center;
+    background-image: linear-gradient(90deg, #ff8a00, #da1b60); /* Gradient effect */
+    background-clip: text;
+    -webkit-background-clip: text; /* For Safari */
+    color: transparent; /* Transparent text so gradient shows through */
+    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2); /* Adds depth */
+    padding: 20px;
+    margin: 20px 0;
+    letter-spacing: 2px; /* Spacing between letters for elegance */
+    line-height: 1.2;
+    border-bottom: 4px solid rgba(255, 255, 255, 0.3); /* Subtle bottom border */
+    display: inline-block;}
   
   /* Headings styling */
   h2 {

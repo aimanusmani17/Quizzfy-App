@@ -16,18 +16,18 @@ const Reports = () => {
       axios
         .get(`http://localhost:3002/report`, {
           headers: {
-            Authorization: `Bearer ${token}`, // Use the token for authorization
+            Authorization: `Bearer ${token}`, 
           },
         })
         .then((response) => {
-          setReports(response.data.data); // Set the reports data
+          setReports(response.data.data); 
         })
         .catch((error) => {
-          setErrorMessage("Error fetching reports"); // Handle errors
+          setErrorMessage("Error fetching reports"); 
           console.error(error);
         });
     } else {
-      setErrorMessage("User not authenticated"); // Handle missing token
+      setErrorMessage("User not authenticated"); 
     }
   }, [reportId]);
 

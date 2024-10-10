@@ -21,8 +21,10 @@ const AttemptQuiz = () => {
   return (
     <>
     <Navbar />
+    <div className={AttemptQuizStyles.main}>
+    <h2 className={AttemptQuizStyles.mainHeading}>Attempt Quiz</h2>
     <div className={AttemptQuizStyles.container}>
-      <h2>Attempt Quiz</h2>
+      
       <h3>Challenge Your Mind, Test Your Skills—Take the Quiz Now!</h3>
 
       <div className={AttemptQuizStyles.buttonContainer}>
@@ -48,6 +50,7 @@ const AttemptQuiz = () => {
 
 
 
+    </div>
     </div>
     </>
   )

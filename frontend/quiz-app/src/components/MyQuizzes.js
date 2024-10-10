@@ -75,9 +75,12 @@ console.log(quizId);
   return (
     <>
       <Navbar />
-
+    <div className={QuizStyles.main}>
+    <h2 className={QuizStyles.mainHeading}>My Quizzes</h2>
+      <div className={QuizStyles.container}>
+    
       <div className={QuizStyles.myQuiz}>
-        <h2>My Quizzes</h2>
+       
         <table>
           <thead>
             <tr>
@@ -151,6 +154,8 @@ console.log(quizId);
             )}
           </tbody>
         </table>
+      </div>
+      </div>
       </div>
     </>
   );
