@@ -3,11 +3,12 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom"
 import LoginStyles from "../styles/Login.module.css";
-import quizImage from "../assets/quizImg/quizlogin.webp";
+import quizImage from "../assets/quizImg/quizlogin.png";
 import axios from "axios";
 
 const Login = () => {
   const navigate = useNavigate();
+  const [loading,setLoading] = useState(false);
 
   const [values, setValues] = useState({
     email: "",
@@ -35,6 +36,8 @@ const Login = () => {
     setValid(isValid);
 
     if (isValid) {
+      setLoading(true);
+
       const data = {
         email: values.email,
         password: values.password,
@@ -52,10 +55,14 @@ const Login = () => {
         .catch((err) => {
           console.log(err);
           setError("Invalid email or password"); // Set error message
+        })
+        .finally(() => {
+          setLoading(false);  // Step 3: Hide loader after completion
         });
     } else {
       setError("Please fill in both email and password fields");
     }
+    
   };
 
   return (
@@ -69,7 +76,7 @@ const Login = () => {
           <div className={LoginStyles.form}>
             <h1 className={LoginStyles.headingTwo}>Login Here</h1>
             <form className={LoginStyles.LoginForm} onSubmit={handleSubmit}>
-              <label htmlFor="email">Email: </label>
+              {/* <label htmlFor="email">Email: </label> */}
               <input
                 className={LoginStyles.formField}
                 type="email"
@@ -83,7 +90,7 @@ const Login = () => {
                 <span className={LoginStyles.error}>Please enter your email address</span>
               )}
 
-              <label htmlFor="password">Password: </label>
+              {/* <label htmlFor="password">Password: </label> */}
               <input
                 className={LoginStyles.formField}
                 type="password"
@@ -99,7 +106,12 @@ const Login = () => {
               {error && <span className={LoginStyles.error}>{error}</span>}
               <div className={LoginStyles.btnContainer}>
                 <button className={LoginStyles.Regbutton} type="submit">
-                  Login
+                {loading ? (
+                  <div className={LoginStyles.spinner}></div>  
+                ) : (
+                  "Login"
+                )}
+                
                 </button>
                 <br />
                 <label className={LoginStyles.confirmLabel}>

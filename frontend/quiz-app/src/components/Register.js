@@ -230,7 +230,7 @@ const Register = () => {
                 disabled={loading}
                 type="submit"
               >
-                {/* {loading ? "Loading...." : "Register"} */}
+               
                 {loading ? (
                   <div className={RegisterStyles.spinner}></div>  
                 ) : (
