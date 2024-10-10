@@ -7,20 +7,15 @@ import HomeCard from "../components/home/HomeCard";
 
 const Home = () => {
   const navigate = useNavigate();
-  // const handleNavigation = (path) => {
-  //   navigate(path);
-  // };
 
-  
-    <Navbar />
- 
- 
+  <Navbar />;
 
   return (
     <>
-    <Navbar />
+      <Navbar />
+      
       <div className={HomeStyles.main}>
-        
+      <h1 className={HomeStyles.mainHeading}>"The Quest for Knowledge Begins Here!"</h1>
         <div className={HomeStyles.pageHeader}>
           <div className={HomeStyles.pageContent}>
             <HomeCard

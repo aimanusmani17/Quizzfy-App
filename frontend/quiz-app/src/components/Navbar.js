@@ -10,14 +10,7 @@ export const Navbar = () => {
     const handleNavigation = (path) => {
         navigate(path);
       };
-      // const handleProfile =() => {
-      //   localStorage.removeItem('token'); 
-      //   localStorage.removeItem('user'); 
     
-      
-      //   navigate('/profile');
-
-      // }
       const handleLogout = () => {
         
         localStorage.removeItem('token'); 
@@ -34,11 +27,12 @@ export const Navbar = () => {
 
 
           <div className={NavStyles.navLinks}>
-            <span onClick={() => handleNavigation('/home')} className={NavStyles.navLink}>Home</span>
-            <span onClick={() => handleNavigation('/create-quiz')} className={NavStyles.navLink}>Create Quiz</span>
-            <span onClick={() => handleNavigation('/my-quizzes')} className={NavStyles.navLink}>My Quizzes</span>
-            <span onClick={() => handleNavigation('/all-reports')} className={NavStyles.navLink}>Quiz Report</span>
-            <span onClick={() => handleNavigation('/attemptQuiz')} className={NavStyles.navLink}>Attempt Quiz</span>
+            <span onClick={() => handleNavigation('/home')} className={NavStyles.navLink}> <i className="fas fa-home"></i>Home</span>
+            <span onClick={() => handleNavigation('/create-quiz')} className={NavStyles.navLink}>  <i className="fas fa-plus-circle"></i> Create Quiz</span>
+            <span onClick={() => handleNavigation('/my-quizzes')} className={NavStyles.navLink}><i className="fas fa-list"></i>My Quizzes</span>
+            <span onClick={() => handleNavigation('/all-reports')} className={NavStyles.navLink}> <i class="fas fa-file-alt"></i>
+            Quiz Report</span>
+            <span onClick={() => handleNavigation('/attemptQuiz')} className={NavStyles.navLink}> <i className="fas fa-play-circle"></i>Attempt Quiz</span>
           </div>
           <img src={ProfileImage} alt="Profile" title="Profile"
           onClick={() => navigate('/profile')} className={NavStyles.ProfileBtn} />

@@ -1,18 +1,41 @@
+
+.main {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../assets/quizImg/quiz-header.webp");
+  background-size: cover;
+  background-position: center;
+  /* height: 100vh; */
+  justify-content: center; 
+}
+
 .heading {
-  color: #ffffff;
+  /* color: #ffffff; */
   text-align: center;
   font-family: "Inika", sans-serif, bold;
   font-size: 50px;
   font-weight: bolder;
+  background-image: linear-gradient(90deg, #ff8a00, #da1b60); /* Gradient effect */
+  background-clip: text;
+  -webkit-background-clip: text; /* For Safari */
+  color: transparent; /* Transparent text so gradient shows through */
+  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2); /* Adds depth */
+  padding: 20px;
 }
 
 .pageHeader {
-  margin: 2rem 10rem;
+  /* margin: 2rem 10rem; */
   border: 1px sold;
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
     rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
   border-radius: 50px;
-  padding: 5rem;
+  /* padding: 5rem; */
+  width: 50rem;
+}
+.quesLabel{
+  margin:0rem;
 }
 
 .pageContent {
@@ -33,11 +56,113 @@
   right: 200px;
   margin: 0 auto;
 }
+
+.formField {
+  position: relative;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+/* Focus and interaction states */
+.formField:focus {
+  border-color: #007bff;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+}
+
+/* Floating Label */
+.formField-container {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.formField-label {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  background-color: #f5f5f5;
+  padding: 0 5px;
+  color: #888;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.formField:focus ~ .formField-label,
+.formField:not(:placeholder-shown) ~ .formField-label {
+  top: -12px;
+  left: 12px;
+  font-size: 0.85rem;
+  color: #007bff;
+  background-color: white;
+  padding: 0 5px;
+}
+
+/* Validation styles */
+.formField:valid {
+  border-color: #28a745;
+}
+
+.formField:invalid {
+  border-color: #dc3545;
+}
+
+.formField-error {
+  color: #dc3545;
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+/* Responsive Layout */
+@media (min-width: 768px) {
+  .formField {
+    font-size: 1.1rem;
+    padding: 14px;
+    width: 80%;
+  }
+
+  .formField-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .formField-label {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin-right: 15px;
+  }
+}
+
+/* Small screen adjustments */
+@media (max-width: 480px) {
+  .formField {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .formField-label {
+    font-size: 0.8rem;
+  }
+}
+
 .quizForm {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   padding: 10px;
+  margin-bottom: 1.5rem;
 }
 .btn {
   background-color: #a6e2e2; /* Background color */
@@ -54,6 +179,7 @@
   margin-top: 10px;
 }
 
+
 .questionCard {
   width: 100%;
   margin-top: 10px;
@@ -65,6 +191,7 @@
 .questionaire {
   padding: 2rem 1rem 2rem;
 }
+
 
 .inputField {
   display: flex;

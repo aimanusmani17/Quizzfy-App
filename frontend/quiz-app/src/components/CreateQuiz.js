@@ -132,7 +132,7 @@ const CreateQuiz = () => {
           <div className={QuizStyles.pageHeader}>
             <div className={QuizStyles.formCard}>
               <form className={QuizStyles.quizForm}>
-                <label htmlFor="name">Quiz Name: </label>
+                <label htmlFor="name" className={QuizStyles.quesLabel}>Quiz Name: </label>
                 <input
                   className={QuizStyles.formField}
                   type="text"
@@ -151,6 +151,7 @@ const CreateQuiz = () => {
                   name="category"
                   value={values.category}
                   onChange={handleInputChange}
+                  className={QuizStyles.formField}
                 >
                   <option value="">Choose Option</option>
                   <option value="exam">Exam</option>
@@ -165,6 +166,7 @@ const CreateQuiz = () => {
                   name="difficultyLevel"
                   value={values.difficultyLevel}
                   onChange={handleInputChange}
+                  className={QuizStyles.formField}
                 >
                   <option value="">Choose Option</option>
                   <option value="easy">Easy</option>
@@ -182,6 +184,7 @@ const CreateQuiz = () => {
                   name="isPublicQuiz"
                   value={values.isPublicQuiz}
                   onChange={handleInputChange}
+                  className={QuizStyles.formField}
                 >
                   <option value="">Choose Option</option>
                   <option value={false}>Private</option>
