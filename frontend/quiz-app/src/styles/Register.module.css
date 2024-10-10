@@ -202,7 +202,7 @@
 .Regbutton {
   padding: 10px 20px;
   font-size: 1rem;
-  background-color: #007bff;
+  background-color: #090f16;
   color: white;
   border: none;
   border-radius: 6px;
@@ -229,9 +229,11 @@
 }
 
 .errorMessage {
-  color: #dc3545;
+  color: #dfd8d8;
   font-size: 0.875rem;
-}
+   
+    margin-top: 5px; /* Optional: Add some space */
+  }
 
 @media (max-width: 768px) {
   .pageContent {

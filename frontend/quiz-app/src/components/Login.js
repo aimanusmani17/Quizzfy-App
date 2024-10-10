@@ -103,7 +103,7 @@ const Login = () => {
                 </button>
                 <br />
                 <label className={LoginStyles.confirmLabel}>
-              Already Login? Then {" "}
+              Not Registered? Then {" "}
               <Link to="/" className={LoginStyles.loginLink}>
                 Register
               </Link>
