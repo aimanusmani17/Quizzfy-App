@@ -132,6 +132,7 @@ const CreateQuiz = () => {
           <div className={QuizStyles.pageHeader}>
             <div className={QuizStyles.formCard}>
               <form className={QuizStyles.quizForm}>
+                <div className={QuizStyles.quizName}>
                 <label htmlFor="name" className={QuizStyles.quesLabel}>Quiz Name: </label>
                 <input
                   className={QuizStyles.formField}
@@ -145,7 +146,9 @@ const CreateQuiz = () => {
                 {submitted && !values.name && (
                   <span id="name-error">Please enter quiz name</span>
                 )}
-
+                </div>
+                <div className={QuizStyles.selectContainer}>
+                <div className={QuizStyles.selectOption}>
                 <label htmlFor="category">Category: </label>
                 <select
                   name="category"
@@ -160,7 +163,8 @@ const CreateQuiz = () => {
                 {submitted && !values.category && (
                   <span id="category-error">Please enter quiz category</span>
                 )}
-
+                </div>
+                <div className={QuizStyles.selectOption}>
                 <label htmlFor="difficultyLevel">Level: </label>
                 <select
                   name="difficultyLevel"
@@ -178,7 +182,9 @@ const CreateQuiz = () => {
                     Enter quiz difficultyLevel:
                   </span>
                 )}
+                </div>
 
+                <div className={QuizStyles.selectOption}>
                 <label htmlFor="isPublicQuiz">Privacy: </label>
                 <select
                   name="isPublicQuiz"
@@ -193,7 +199,8 @@ const CreateQuiz = () => {
                 {submitted && !values.privacy && (
                   <span id="privacy-error">Enter quiz privacy:</span>
                 )}
-
+                </div>
+                <div className={QuizStyles.selectOption}>
                 <label htmlFor="passingPercentage">Passing Percentage: </label>
                 <input
                   className={QuizStyles.formField}
@@ -209,31 +216,15 @@ const CreateQuiz = () => {
                     Enter the passing percentage:
                   </span>
                 )}
+                </div>
+                </div>
 
-                {/* <label htmlFor="allowedUser">Number of Allowed Users: </label>
-                <input
-                  className={QuizStyles.formField}
-                  type="text"
-                  placeholder="Enter number of allowed users"
-                  name="allowedUser"
-                  required
-                  value={values.allowedUser}
-                  onChange={handleInputChange}
-                /> */}
-                {/* {submitted && !values.allowedUser && (
-                  <span id="allowedUser-error">
-                    Enter the number of allowed users:
-                  </span>
-                )} */}
+              
 
-                {/* <button type="button" className={QuizStyles.btn}>
-                  Create
-                </button> */}
               </form>
             </div>
 
-            {/* Render quesList only if form is valid */}
-            {/* {valid && */}
+          
 
             {quesList.map((q, index) => (
               <div key={index} className={QuizStyles.questionCard}>
@@ -273,8 +264,8 @@ const CreateQuiz = () => {
                             type="button"
                             className={QuizStyles.rmvBtn}
                             onClick={() => handleRemoveOption(index, oIndex)}
-                          >
-                            Remove
+                          > <i class="fas fa-trash-alt"></i>
+                            
                           </button>
                         )}
                       </div>

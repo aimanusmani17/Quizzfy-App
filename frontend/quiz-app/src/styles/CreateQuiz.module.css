@@ -36,6 +36,7 @@
 }
 .quesLabel{
   margin:0rem;
+  align-items: left;
 }
 
 .pageContent {
@@ -43,6 +44,102 @@
   justify-content: space-between;
   align-items: center;
   margin: 3rem auto;
+}
+.quizName {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  width: 100%; /* Ensures it takes full width of the parent container */
+  /* max-width: 600px; Limits the width for larger screens */
+}
+
+.quesLabel {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: #333; /* Slightly darker for better contrast */
+}
+
+.formField {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.formField:focus {
+  border-color: #007bff; /* Highlight border on focus */
+  outline: none;
+}
+
+/* Error message */
+span {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 5px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .quizName {
+    max-width: 100%; /* On smaller screens, it takes full width */
+  }
+
+  .quesLabel {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+
+  .formField {
+    font-size: 0.9rem;
+  }
+}
+
+
+.selectContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.selectOption {
+  flex: 1 1 calc(50% - 20px); /* Each field takes 50% width minus the gap */
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.formField {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Error message styles */
+span {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 5px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .selectOption {
+    flex: 1 1 100%; /* Each field takes full width on smaller screens */
+  }
+
+  .formField {
+    font-size: 0.9rem;
+  }
 }
 
 .formCard {
@@ -113,6 +210,7 @@
 
 .formField:invalid {
   border-color: #dc3545;
+  width:90%
 }
 
 .formField-error {
@@ -163,6 +261,7 @@
   justify-content: space-evenly;
   padding: 10px;
   margin-bottom: 1.5rem;
+  align-items: center;
 }
 .btn {
   background-color: #a6e2e2; /* Background color */
@@ -240,18 +339,12 @@
   width: 8rem;
 }
 .rmvBtn {
-  align-items: center;
-  background-color: #354dd7;
+  background-color: transparent;
   border: none;
-  border-radius: 5px;
-  color: #fff;
   cursor: pointer;
-  display: flex;
-  font-size: larger;
-  height: 1.8rem;
-  justify-content: center;
-  /* margin: .5rem 0 0 1rem; */
-  width: 5rem;
+  font-size: 24px;
+  color: #ff4d4d; /* Red color for delete */
+  transition: color 0.3s ease;
 }
 
 .addQue {
@@ -325,6 +418,7 @@
   gap: 0;
   margin-left: 2rem;
   > span.correctAnswerLabel {
+    color:#000000;
     max-width: 4.2rem;
   }
 }
