@@ -11,6 +11,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
 
   const [isDisabled, setIsDisabled] = useState(true);
   const [values, setValues] = useState({
@@ -120,6 +121,8 @@ const Register = () => {
     setSubmitted(true);
 
     if (validateForm()) {
+      setLoading(true);
+
       const data = {
         name: values.name,
         email: values.email,
@@ -142,12 +145,17 @@ const Register = () => {
           } else {
             toast.error('Registration failed. Please try again.');
           }
-          
-          console.log(err);
+        })
+        .finally(() => {
+          setLoading(false);  // Step 3: Hide loader after completion
         });
+          
+         
     } else {
       // toast.error('Please fix the errors before submitting.');
     }
+
+   
   };
 
   return (
@@ -219,10 +227,16 @@ const Register = () => {
             <div className={RegisterStyles.btnContainer}>
               <button
                 className={RegisterStyles.Regbutton}
-                // disabled={isDisabled}
+                disabled={loading}
                 type="submit"
               >
-                Register
+                {/* {loading ? "Loading...." : "Register"} */}
+                {loading ? (
+                  <div className={RegisterStyles.spinner}></div>  
+                ) : (
+                  "Register"
+                )}
+                
               </button>
               <br />
             </div>
