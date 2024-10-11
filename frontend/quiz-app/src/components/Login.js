@@ -5,6 +5,7 @@ import { Link } from "react-router-dom"
 import LoginStyles from "../styles/Login.module.css";
 import quizImage from "../assets/quizImg/quizlogin.png";
 import axios from "axios";
+import { BlinkBlur} from "react-loading-indicators";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -106,11 +107,13 @@ const Login = () => {
               {error && <span className={LoginStyles.error}>{error}</span>}
               <div className={LoginStyles.btnContainer}>
                 <button className={LoginStyles.Regbutton} type="submit">
-                {loading ? (
-                  <div className={LoginStyles.spinner}></div>  
-                ) : (
-                  "Login"
-                )}
+               
+              {loading ? (
+                <BlinkBlur className={LoginStyles.loadingBar} color="#4931cc" size="small" text="loading" textColor="" />
+              ) : (
+                "Login"                
+              )}
+              
                 
                 </button>
                 <br />
