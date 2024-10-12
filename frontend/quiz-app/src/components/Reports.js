@@ -14,7 +14,7 @@ const Reports = () => {
 
     if (token) {
       axios
-        .get(`http://localhost:3002/report`, {
+        .get(`https://quizzfy-app.onrender.com/quiz/`, {
           headers: {
             Authorization: `Bearer ${token}`, 
           },
