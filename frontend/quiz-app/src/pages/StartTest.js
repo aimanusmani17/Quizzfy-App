@@ -81,6 +81,7 @@ const StartTest = () => {
 
   return (
     <>
+    <div className={TestStyles.main}>
        {currentQuiz && (
         <div className={TestStyles.form}>
           <h2>{currentQuiz.name}</h2>
@@ -136,6 +137,7 @@ const StartTest = () => {
           </form>
         </div>
       )}
+      </div>
     
     </>
   )

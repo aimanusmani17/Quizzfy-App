@@ -1,163 +1,5 @@
 
 
-// .main {
- 
-//   padding: 20px;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-
-//   background-image: url("../assets/quizImg/quiz-header.webp"); 
-//   background-size: cover;
-//   background-position: center; 
-//   height: 100vh;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-// }
-
-// .heading {
-//   color: #ffffff;
-//   text-align: center;
-//   font-family: "Inika", sans-serif, bold;
-//   font-size: 2.5rem; /* Use rem for scaling */
-//   font-weight: bolder;
-// }
-
-// .headingTwo {
-//   color: #ffffff;
-//   font-family: "Inika", sans-serif;
-//   font-weight: bold;
-//   text-align: center;
-//   font-size: 1.5rem; 
-// }
-
-// .pageContent {
-//   width: 100%;
-//   max-width: 1200px; 
-//   margin: auto;
-// }
-
-// .cards {
-//   margin-bottom: 1rem; 
-//   width: calc(33.33% - 20px); 
-//   height: auto; 
-//   max-height: 140px; 
-//   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2), 0 5px 5px rgba(0, 0, 0, 0.24);
-//   padding: 10px;
-//   border-radius: 12px; 
-//   background-color: rgba(65, 159, 211, 0.7); 
-//   display: flex;
-//   flex-direction: column; 
-//   justify-content: center; 
-//   align-items: center; 
-// }
-
-
-// .cardContainer {
-//   display: flex;
-//   flex-direction: column; 
-//   flex-wrap: wrap; 
-//   justify-content: space-around; 
-// }
-
-
-
-
-
-// .btn {
-//   background-color: #a6e2e2; 
-//   color: #000000;
-//   border: none; 
-//   padding: 10px 20px; 
-//   font-size: 1rem; 
-//   border-radius: 5px; 
-//   cursor: pointer; 
-//   width: 50%;
-//   align-items: center;
-//   margin: 10px auto; 
-// }
-
-// .pageHeader {
-//   margin: 2rem auto; 
-//   border: 1px solid;
-//   box-shadow: rgba(14, 30, 37, 0.12) 0 2px 4px, rgba(14, 30, 37, 0.32) 0 2px 16px;
-//   border-radius: 50px;
-//   padding: 2rem;
-//   width: 100%; 
-//   max-width: 1200px; 
-// }
-
-// .buttonCard {
-//   background-image: linear-gradient(-180deg, #37aee2 0%, #1e96c8 100%);
-//   border-radius: 0.5rem;
-//   box-sizing: border-box;
-//   color: #ffffff;
-//   display: flex;
-//   font-size: 1rem; 
-//   align-self: center;
-//   justify-content: center;
-//   padding: 1rem 1.75rem;
-//   text-decoration: none;
-//   width: 100%; 
-//   max-width: 200px; 
-//   text-align: center;
-//   align-items: center;
-//   cursor: pointer;
-//   user-select: none;
-//   -webkit-user-select: none;
-//   touch-action: manipulation;
-// }
-
-// .buttonCard:hover {
-//   background-image: linear-gradient(-180deg, #1d95c9 0%, #17759c 100%);
-// }
-
-// /* Responsive adjustments */
-// @media (max-width: 768px) {
-//   .heading {
-//     font-size: 2rem; /* Smaller size for tablets */
-//   }
-
-//   .headingTwo {
-//     font-size: 1.2rem; /* Smaller size for tablets */
-//   }
-
-//   .btn {
-//     width: 70%; /* Wider button on smaller screens */
-//   }
-
-//   .cards {
-//     max-height: 120px; /* Adjust max height */
-//   }
-
-//   .buttonCard {
-//     max-width: 90%; /* Allow cards to expand on small screens */
-//   }
-// }
-
-// @media (max-width: 480px) {
-//   .heading {
-//     font-size: 1.5rem; /* Smaller size for mobile */
-//   }
-
-//   .headingTwo {
-//     font-size: 1rem; /* Smaller size for mobile */
-//   }
-
-//   .btn {
-//     width: 80%; /* Wider button on mobile */
-//   }
-
-//   .cards {
-//     max-height: 100px; /* Adjust max height */
-//   }
-
-//   .buttonCard {
-//     max-width: 100%; /* Full width on mobile */
-//   }
-// }
-
 .main {
   padding: 20px;
   display: flex;
@@ -171,42 +13,41 @@
 }
 
 .mainHeading {
-  font-family: 'Poppins', sans-serif, 'cursive'; /* Clean, modern font */
-  font-size: 3rem; /* Size for large screens */
+  font-family: 'Poppins', sans-serif, 'cursive';
+  font-size: 3rem;
   font-weight: bold;
-  color: #ffffff; /* White text for contrast */
-  text-align: center;
-  background-image: linear-gradient(90deg, #ff8a00, #da1b60); /* Gradient effect */
+  color: transparent;
+  background-image: linear-gradient(90deg, #ff8a00, #da1b60);
   background-clip: text;
-  -webkit-background-clip: text; /* For Safari */
-  color: transparent; /* Transparent text so gradient shows through */
-  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2); /* Adds depth */
-  padding: 20px;
-  margin: 20px 0;
-  letter-spacing: 2px; /* Spacing between letters for elegance */
+  -webkit-background-clip: text;
+  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+  padding: 0px;
+  margin: 0px 0;
+  letter-spacing: 2px;
   line-height: 1.2;
-  border-bottom: 4px solid rgba(255, 255, 255, 0.3); /* Subtle bottom border */
+  border-bottom: 4px solid rgba(255, 255, 255, 0.3);
   display: inline-block;
 }
 
 @media (max-width: 768px) {
-  .main-heading {
-    font-size: 2.5rem; /* Adjust for smaller screens */
+  .mainHeading {
+    font-size: 2.5rem;
+    margin: 15px 0;
   }
 }
 
 @media (max-width: 480px) {
-  .main-heading {
-    font-size: 2rem; /* Further adjust for mobile */
+  .mainHeading {
+    font-size: 2rem;
+    margin: 10px 0;
   }
 }
-
 
 .heading {
   color: #ffffff;
   text-align: center;
   font-family: "Inika", sans-serif, bold;
-  font-size: 2.5rem; /* Use rem for scaling */
+  font-size: 2.5rem;
   font-weight: bolder;
 }
 
@@ -223,18 +64,20 @@
   max-width: 1200px;
   margin: auto;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .cardContainer {
   display: flex;
-  flex-wrap: wrap; /* Allow wrapping */
-  justify-content: space-between; /* Distribute space evenly */
+  flex-wrap: wrap;
+  justify-content: space-between;
   width: 100%;
 }
 
 .cards {
-  margin: 10px; /* Add margin for spacing between cards */
-  width: calc(33.33% - 20px); /* Set width to one-third with margin */
+  margin: 10px;
+  width: calc(33.33% - 20px);
   height: auto;
   max-height: 140px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2), 0 5px 5px rgba(0, 0, 0, 0.24);
@@ -245,6 +88,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding:10px;
+  margin:10px;
 }
 
 .btn {
@@ -256,8 +101,7 @@
   border-radius: 5px;
   cursor: pointer;
   width: 50%;
-  align-items: center;
-  margin: 10px auto; /* Center the button */
+  margin: 10px auto;
 }
 
 .pageHeader {
@@ -286,59 +130,57 @@
   text-align: center;
   align-items: center;
   cursor: pointer;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
 }
 
 .buttonCard:hover {
   background-image: linear-gradient(-180deg, #1d95c9 0%, #17759c 100%);
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments for tablets */
 @media (max-width: 768px) {
   .heading {
-    font-size: 2rem; /* Smaller size for tablets */
+    font-size: 2rem;
   }
 
   .headingTwo {
-    font-size: 1.2rem; /* Smaller size for tablets */
+    font-size: 1.2rem;
   }
 
   .btn {
-    width: 70%; /* Wider button on smaller screens */
+    width: 70%;
   }
 
   .cards {
-    width: calc(50% - 20px); /* Two cards per row on tablets */
-    max-height: 120px; /* Adjust max height */
+    width: calc(50% - 20px);
+    max-height: 130px;
   }
 
   .buttonCard {
-    max-width: 90%; /* Allow cards to expand on small screens */
+    max-width: 90%;
   }
 }
 
+/* Responsive adjustments for mobile */
 @media (max-width: 480px) {
   .heading {
-    font-size: 1.5rem; /* Smaller size for mobile */
+    font-size: 1.5rem;
   }
 
   .headingTwo {
-    font-size: 1rem; /* Smaller size for mobile */
+    font-size: 1rem;
   }
 
   .btn {
-    width: 80%; /* Wider button on mobile */
+    width: 80%;
   }
 
   .cards {
-    width: 100%; /* Full width on mobile */
-    max-height: 100px; /* Adjust max height */
-    margin: 10px 0; /* Margin for spacing */
+    width: 100%;
+    max-height: 130px;
+    margin: 10px 0;
   }
 
   .buttonCard {
-    max-width: 100%; /* Full width on mobile */
+    max-width: 100%;
   }
 }

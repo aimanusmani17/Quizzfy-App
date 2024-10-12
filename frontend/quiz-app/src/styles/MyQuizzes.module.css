@@ -8,8 +8,7 @@ background-size: cover;
 background-position: center;
 height: 100vh;
 justify-content: center;
-position: relative; /* Allows adjusting position with top property */
-/* top: -20px; Move the container 20px upwards */
+position: relative; 
 }
 /* Center and adjust the position */
 .container { 

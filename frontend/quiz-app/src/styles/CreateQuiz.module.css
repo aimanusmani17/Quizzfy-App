@@ -9,6 +9,7 @@
   background-position: center;
   /* height: 100vh; */
   justify-content: center; 
+  position: relative;
 }
 
 .heading {
@@ -75,8 +76,18 @@
 }
 
 /* Error message */
-span {
+/* span {
   color: red;
+  font-size: 0.875rem;
+  margin-top: 5px;
+} */
+
+#name-error,
+#category-error,
+#difficultyLevel-error,
+#privacy-error,
+#passingPercentage-error{
+  /* color: red; */
   font-size: 0.875rem;
   margin-top: 5px;
 }
@@ -126,7 +137,7 @@ label {
 
 /* Error message styles */
 span {
-  color: red;
+  /* color: red; */
   font-size: 0.875rem;
   margin-top: 5px;
 }

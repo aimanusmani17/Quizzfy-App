@@ -80,6 +80,7 @@ const StartExam = () => {
 
   return (
     <>
+    <div className={ExamStyles.main}>
       {currentQuiz && (
         <div className={ExamStyles.form}>
           <h2>{currentQuiz.name}</h2>
@@ -134,6 +135,7 @@ const StartExam = () => {
           </form>
         </div>
       )}
+      </div>
     </>
   );
 };

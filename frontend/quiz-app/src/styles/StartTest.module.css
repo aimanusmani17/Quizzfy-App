@@ -1,6 +1,16 @@
-/* Test.module.css */
 
-/* Container styles */
+.main {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../assets/quizImg/quiz-header.webp");
+  background-size: cover;
+  background-position: center;
+  /* height: 100vh; */
+  justify-content: center; 
+}
+
 .form {
     max-width: 800px;
     margin: 0 auto;
