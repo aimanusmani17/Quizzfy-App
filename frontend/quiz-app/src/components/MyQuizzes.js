@@ -12,7 +12,7 @@ const MyQuizzes = () => {
   useEffect(() => {
     
     axios
-      .get(`http://localhost:3002/quiz`, {
+      .get(`https://quizzfy-app.onrender.com/quiz/`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("loginToken")}`,
         },
@@ -30,7 +30,7 @@ const MyQuizzes = () => {
     // const quizId = localStorage.getItem("loginToken");
 
     axios
-      .delete(`http://localhost:3002/quiz/${quizId}`, {
+      .delete(`https://quizzfy-app.onrender.com/quiz/`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("loginToken")}`,
         },
@@ -48,7 +48,7 @@ const MyQuizzes = () => {
 console.log(quizId);
     axios
       .patch(
-        "http://localhost:3002/quiz/publish",
+        "`https://quizzfy-app.onrender.com/quiz/`",
         { quizId },
         {
           headers: {
