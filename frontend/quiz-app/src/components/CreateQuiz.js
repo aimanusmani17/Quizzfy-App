@@ -266,6 +266,8 @@ const CreateQuiz = () => {
                             onClick={() => handleRemoveOption(index, oIndex)}
                           > <i class="fas fa-trash-alt"></i>
                             
+
+                            
                           </button>
                         )}
                       </div>

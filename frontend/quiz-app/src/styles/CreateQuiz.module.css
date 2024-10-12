@@ -158,7 +158,8 @@ span {
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
   padding: 3rem;
   border-radius: 24px;
-  background-color: #419fd3;
+  background-color: rgba(65, 159, 211, 0.7);
+  /* background-color: #419fd3; */
   /* position: relative; */
   /* top: 80px; */
   right: 200px;

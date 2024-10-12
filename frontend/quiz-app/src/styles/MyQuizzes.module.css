@@ -16,7 +16,8 @@ position: relative;
      top: -20px; 
      width: 90%;
     max-width: 1200px; 
-     background-color: rgba(250, 235, 215, 0.9); 
+    background-color:  rgba(65, 159, 211, 0.7);
+     /* background-color: rgba(250, 235, 215, 0.9);  */
     padding: 20px;
     border-radius: 14px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -60,7 +61,7 @@ position: relative;
 
 
 .myQuiz {
-    /* margin: 20px auto; */
+    margin: 20px auto;
     width: 90%;
     max-width: 1200px;
     background-color: rgba(250, 235, 215, 0.9); /* Light, translucent background */
