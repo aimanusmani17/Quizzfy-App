@@ -25,7 +25,7 @@ const EditQuiz = () => {
     const token = localStorage.getItem("loginToken");
 
     axios
-      .get(`https://quizzfy-app.onrender.com/quiz/${quizId}`, {
+      .get(`https://quizzfy-app.onrender.com/quiz/`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -88,7 +88,7 @@ const EditQuiz = () => {
     const token = localStorage.getItem("loginToken");
     console.log(values);
     axios
-      .put(`http://localhost:3002/quiz`, values, {
+      .put(`https://quizzfy-app.onrender.com/quiz/`, values, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -104,6 +104,7 @@ const EditQuiz = () => {
   return (
     <>
       <Navbar />
+      <div className={QuizStyles.quizMain}>
       <div className={QuizStyles.editQuiz}>
         <h2 className={QuizStyles.heading}>Edit Quiz</h2>
         <div className={QuizStyles.container}>
@@ -213,6 +214,7 @@ const EditQuiz = () => {
         <button type="button" className={QuizStyles.btnCreate} onClick={handleUpdateQuiz}>
           Update Quiz
         </button>
+      </div>
       </div>
     </>
   );
