@@ -20,7 +20,7 @@ const Profile = () => {
       }
 
       axios
-        .get("http://localhost:3002/user", {
+        .get("https://quizzfy-app.onrender.com/auth/user", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -54,7 +54,7 @@ const handleChangePassword = (e) => {
   
     axios
       .put(
-        'http://localhost:3002/user/changepassword',
+        'https://quizzfy-app.onrender.com/auth/user/changepassword',
         {
           currentPassword,
           newPassword,
