@@ -95,7 +95,11 @@ position: relative;
 
 /* Table header styling */
 .myQuiz th {
-    background-color: #f1f1f1;
+   
+        background-color: #4CAF50;
+        color: white;
+    
+    /* background-color: #f1f1f1; */
     font-weight: bold;
     padding: 12px;
     text-align: center; /* Center the text in headers */

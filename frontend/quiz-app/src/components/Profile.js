@@ -82,8 +82,11 @@ const handleChangePassword = (e) => {
   return (
     <>
       <Navbar />
+      <div className={ProfileStyles.profileMain}>
+
+      <h1 className={ProfileStyles.heading}>My Profile</h1>
       <div className={ProfileStyles.container}>
-        <h1 className={ProfileStyles.header}>My Profile</h1>
+        
 
         {userInfo ? (
           <div className={ProfileStyles.userInfo}>
@@ -140,6 +143,7 @@ const handleChangePassword = (e) => {
             Deactivate Account
           </button>
         </div>
+      </div>
       </div>
     </>
   );

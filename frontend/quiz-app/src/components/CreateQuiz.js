@@ -115,7 +115,7 @@ const CreateQuiz = () => {
       })
       .then((res) => {
         console.log(res);
-        navigate('/my-quizzes')
+        navigate("/my-quizzes");
       })
       .catch((err) => console.log(err));
   };
@@ -133,98 +133,99 @@ const CreateQuiz = () => {
             <div className={QuizStyles.formCard}>
               <form className={QuizStyles.quizForm}>
                 <div className={QuizStyles.quizName}>
-                <label htmlFor="name" className={QuizStyles.quesLabel}>Quiz Name: </label>
-                <input
-                  className={QuizStyles.formField}
-                  type="text"
-                  placeholder="Enter quiz name"
-                  name="name"
-                  required
-                  value={values.name}
-                  onChange={handleInputChange}
-                />
-                {submitted && !values.name && (
-                  <span id="name-error">Please enter quiz name</span>
-                )}
+                  <label htmlFor="name" className={QuizStyles.quesLabel}>
+                    Quiz Name:{" "}
+                  </label>
+                  <input
+                    className={QuizStyles.formField}
+                    type="text"
+                    placeholder="Enter quiz name"
+                    name="name"
+                    required
+                    value={values.name}
+                    onChange={handleInputChange}
+                  />
+                  {submitted && !values.name && (
+                    <span id="name-error">Please enter quiz name</span>
+                  )}
                 </div>
                 <div className={QuizStyles.selectContainer}>
-                <div className={QuizStyles.selectOption}>
-                <label htmlFor="category">Category: </label>
-                <select
-                  name="category"
-                  value={values.category}
-                  onChange={handleInputChange}
-                  className={QuizStyles.formField}
-                >
-                  <option value="">Choose Option</option>
-                  <option value="exam">Exam</option>
-                  <option value="test">Test</option>
-                </select>
-                {submitted && !values.category && (
-                  <span id="category-error">Please enter quiz category</span>
-                )}
-                </div>
-                <div className={QuizStyles.selectOption}>
-                <label htmlFor="difficultyLevel">Level: </label>
-                <select
-                  name="difficultyLevel"
-                  value={values.difficultyLevel}
-                  onChange={handleInputChange}
-                  className={QuizStyles.formField}
-                >
-                  <option value="">Choose Option</option>
-                  <option value="easy">Easy</option>
-                  <option value="medium">Medium</option>
-                  <option value="hard">Difficult</option>
-                </select>
-                {submitted && !values.difficultyLevel && (
-                  <span id="difficultyLevel-error">
-                    Enter quiz difficultyLevel:
-                  </span>
-                )}
-                </div>
+                  <div className={QuizStyles.selectOption}>
+                    <label htmlFor="category">Category: </label>
+                    <select
+                      name="category"
+                      value={values.category}
+                      onChange={handleInputChange}
+                      className={QuizStyles.formField}
+                    >
+                      <option value="">Choose Option</option>
+                      <option value="exam">Exam</option>
+                      <option value="test">Test</option>
+                    </select>
+                    {submitted && !values.category && (
+                      <span id="category-error">
+                        Please enter quiz category
+                      </span>
+                    )}
+                  </div>
+                  <div className={QuizStyles.selectOption}>
+                    <label htmlFor="difficultyLevel">Level: </label>
+                    <select
+                      name="difficultyLevel"
+                      value={values.difficultyLevel}
+                      onChange={handleInputChange}
+                      className={QuizStyles.formField}
+                    >
+                      <option value="">Choose Option</option>
+                      <option value="easy">Easy</option>
+                      <option value="medium">Medium</option>
+                      <option value="hard">Difficult</option>
+                    </select>
+                    {submitted && !values.difficultyLevel && (
+                      <span id="difficultyLevel-error">
+                        Enter quiz difficultyLevel:
+                      </span>
+                    )}
+                  </div>
 
-                <div className={QuizStyles.selectOption}>
-                <label htmlFor="isPublicQuiz">Privacy: </label>
-                <select
-                  name="isPublicQuiz"
-                  value={values.isPublicQuiz}
-                  onChange={handleInputChange}
-                  className={QuizStyles.formField}
-                >
-                  <option value="">Choose Option</option>
-                  <option value={false}>Private</option>
-                  <option value={true}>Public</option>
-                </select>
-                {submitted && !values.privacy && (
-                  <span id="privacy-error">Enter quiz privacy:</span>
-                )}
+                  <div className={QuizStyles.selectOption}>
+                    <label htmlFor="isPublicQuiz">Privacy: </label>
+                    <select
+                      name="isPublicQuiz"
+                      value={values.isPublicQuiz}
+                      onChange={handleInputChange}
+                      className={QuizStyles.formField}
+                    >
+                      <option value="">Choose Option</option>
+                      <option value={false}>Private</option>
+                      <option value={true}>Public</option>
+                    </select>
+                    {submitted && !values.privacy && (
+                      <span id="privacy-error">Enter quiz privacy:</span>
+                    )}
+                  </div>
+                  <div className={QuizStyles.selectOption}>
+                    <label htmlFor="passingPercentage">
+                      Passing Percentage:{" "}
+                    </label>
+                    <input
+                      className={QuizStyles.formField}
+                      type="number"
+                      placeholder="Enter your passing percentage"
+                      name="passingPercentage"
+                      required
+                      value={values.passingPercentage}
+                      onChange={handleInputChange}
+                    />
+                    {submitted && !values.passingPercentage && (
+                      <span id="passingPercentage-error">
+                        Enter the passing percentage:
+                      </span>
+                    )}
+                  </div>
                 </div>
-                <div className={QuizStyles.selectOption}>
-                <label htmlFor="passingPercentage">Passing Percentage: </label>
-                <input
-                  className={QuizStyles.formField}
-                  type="number"
-                  placeholder="Enter your passing percentage"
-                  name="passingPercentage"
-                  required
-                  value={values.passingPercentage}
-                  onChange={handleInputChange}
-                />
-                {submitted && !values.passingPercentage && (
-                  <span id="passingPercentage-error">
-                    Enter the passing percentage:
-                  </span>
-                )}
-                </div>
-                </div>
-
-              
-
               </form>
             </div>
-
-          
 
             {quesList.map((q, index) => (
               <div key={index} className={QuizStyles.questionCard}>
@@ -264,10 +265,9 @@ const CreateQuiz = () => {
                             type="button"
                             className={QuizStyles.rmvBtn}
                             onClick={() => handleRemoveOption(index, oIndex)}
-                          > <i class="fas fa-trash-alt"></i>
-                            
-
-                            
+                          >
+                            {" "}
+                            <i class="fas fa-trash-alt"></i>
                           </button>
                         )}
                       </div>

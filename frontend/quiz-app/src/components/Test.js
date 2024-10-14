@@ -17,7 +17,7 @@ const Test = () => {
     const userId = localStorage.getItem("userId");
 
     axios
-      .get("http://localhost:3002/quiz/allpublishedquiz/test", {
+      .get("https://quizzfy-app.onrender.com/quiz/allpublishedquiz/exam", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -39,32 +39,43 @@ const Test = () => {
     <>
      <>
       <Navbar />
-      <div className={ExamStyles.examContainer}>
-        <h1 className={ExamStyles.heading}>Available Test Quizzes</h1>
-        <table className={ExamStyles.table}>
-          <thead>
-            <tr>
-              <th>Quiz Name</th>
-              <th>Action</th>
+      <div className={ExamStyles.examMain}>
+      <h1 className={ExamStyles.heading}>Available Test Quizzes</h1>
+  <div className={ExamStyles.examContainer}>
+   
+    <table className={ExamStyles.table}>
+      <thead>
+        <tr>
+          <th>Quiz Name</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {quizzes.length=== 0 ? (
+          <tr>
+            <td colSpan="3" style={{ textAlign: "center" }}>No quiz found </td>
             </tr>
-          </thead>
-          <tbody>
-            {quizzes.map((quiz) => (
-              <tr key={quiz._id}>
-                <td>{quiz.name}</td>
-                <td>
-                  <button
-                    className={ExamStyles.btn}
-                    onClick={() =>  navigate(`/start-test/${quiz._id}`)}
-                  >
-                    Start Test Quiz
-                  </button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+            ) : (
+        
+        quizzes.map((quiz) => (
+          <tr key={quiz._id}>
+            <td>{quiz.name}</td>
+            <td>
+              <button
+                className={ExamStyles.btn}
+                onClick={() => navigate(`/start-test/${quiz._id}`)}
+              >
+                Start Test Quiz
+              </button>
+            </td>
+          </tr>
+        ))
+      )}
+      </tbody>
+    </table>
+  </div>
+</div>
+
     </>
   
     </>

@@ -1,13 +1,15 @@
 .examMain {
-  padding: 5px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-image: url("../assets/quizImg/quiz-header.webp");
   background-size: cover;
   background-position: center;
-  /* height: 100vh; */
-  justify-content: center; 
+  min-height: 100vh;
+  justify-content: flex-start; /* Adjusted to move content below the navbar */
+  position: relative; 
+  
 }
 
 
@@ -27,16 +29,24 @@
     width: 90%;
     margin: 0 auto;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: rgba(65, 159, 211, 0.7);
+    /* background-color: #f9f9f9; */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
   .heading {
     text-align: center;
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 20px;
+    font-family: "Inika", sans-serif, bold;
+    font-size: 3rem;
+    font-weight: bolder;
+    background-image: linear-gradient(90deg, #ff8a00, #da1b60);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+    /* margin-top: 100px;  */
+    padding: 20px 0;
   }
   
   /* Table styles */
@@ -49,13 +59,27 @@
   .table thead {
     background-color: #4CAF50;
     color: white;
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+
+    font-weight: bold;
+    padding: 12px;
+    text-align: center; /* Center the text in headers */
+    border-bottom: 2px solid #dad7d7;
+    font-size: 1.2rem;
   }
   
-  .table th, 
+  .table th{
+
+
+  } 
   .table td {
     padding: 12px;
     text-align: left;
     border-bottom: 1px solid #ddd;
+    background-color: #f2f2f2;
+    
   }
   
   .table th {
@@ -72,7 +96,7 @@
   }
   
   .table tr:hover {
-    background-color: #e1e1e1;
+    /* background-color: #e1e1e1; */
   }
   
   /* Button styles */

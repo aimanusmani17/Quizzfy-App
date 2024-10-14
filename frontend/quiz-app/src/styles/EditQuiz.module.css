@@ -1,172 +1,178 @@
-.quizMain{
-padding: 20px;
-display: flex;
-flex-direction: column;
-align-items: center;
-background-image: url("../assets/quizImg/quiz-header.webp");
-background-size: cover;
-background-position: center;
-height: 100vh;
-justify-content: center;
-position: relative; 
+
+
+.quizMain {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../assets/quizImg/quiz-header.webp");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  justify-content: flex-start; /* Adjusted to move content below the navbar */
+  position: relative; 
+}
+
+
+
+.heading {
+  text-align: center;
+  font-family: "Inika", sans-serif, bold;
+  font-size: 3rem;
+  font-weight: bolder;
+  background-image: linear-gradient(90deg, #ff8a00, #da1b60);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+  /* margin-top: 100px;  */
+  padding: 20px 0;
 }
 
 .editQuiz {
-    width: 60%;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .heading {
-    text-align: center;
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  .container {
-    margin-bottom: 15px;
-  }
-  
-  .label {
-    display: block;
-    font-size: 16px;
-    color: #444;
-    margin-bottom: 8px;
-  }
-  
-  /* input[type="text"],
-  input[type="number"], */
-  .quizPrivacy, .quizDiffLevel {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .questionCard {
-    padding: 20px;
-    margin-bottom: 20px;
-    background-color: #fff;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .questionCard label {
-    font-weight: bold;
-    color: #555;
-  }
-  
-  .quesField {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .options {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
-  }
-  
-  .options input[type="text"] {
-    flex: 1;
-    padding: 8px;
-    margin-right: 10px;
-  }
-  
-  .addBtn,
-  .rmvBtn {
-    padding: 8px 12px;
-    font-size: 14px;
-    color: #fff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .rmvBtn {
-    background-color: #e74c3c;
-  }
-  
-  .addBtn:hover,
-  .rmvBtn:hover {
-    background-color: #0056b3;
-  }
-  
-  .rmvBtn:hover {
-    background-color: #c0392b;
-  }
-  
-  .correctAnswerInput {
-    margin-top: 10px;
-    padding: 10px;
-    width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .addQdiv {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  .addQue {
-    padding: 10px 20px;
-    font-size: 16px;
-    color: #fff;
-    background-color: #28a745;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .addQue:hover {
-    background-color: #218838;
-  }
-  
-  .btnCreate {
-    display: block;
-    width: 100%;
-    padding: 12px;
-    font-size: 18px;
-    color: #fff;
-    background-color: #28a745;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin:10px;
-  }
-  
-  .btnCreate:hover {
-    background-color: #218838;
-  }
-  
-  /* Responsive styling */
-  @media (max-width: 768px) {
-    .editQuiz {
-      width: 90%;
+  background-color: rgba(65, 159, 211, 0.7);
+  /* background-color: #ffffff; */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Adds proper spacing between elements */
+  position: relative;
+  margin-top: 20px;
+}
+
+.container, input, select {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.label {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+input[type="text"], input[type="number"], select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.questionCard {
+  background-color: #f0f0f0;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.questionaire {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.quesField, .options input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.correctAnswerInput {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+}
+
+.rmvBtn, .addBtn {
+  background-color: #ff6b6b;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.addBtn {
+  background-color: #4caf50;
+}
+
+.addQue {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.rmvQuesBtn{
+  background-color: #bd221d;
+  color: white;
+  padding: 5px 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 9rem;
+    height: 3rem;
+
+}
+
+.btnCreate {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .editQuiz {
       padding: 15px;
-    }
-  
-    .options {
-      flex-direction: column;
-    }
-  
-    .options input[type="text"] {
-      margin-right: 0;
-      margin-bottom: 10px;
-    }
   }
-  
+
+  .heading {
+      font-size: 1.5rem;
+  }
+
+  input, select, .quesField, .options input {
+      font-size: 0.9rem;
+  }
+
+  .btnCreate, .addQue {
+      font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .editQuiz {
+      padding: 10px;
+  }
+
+  .heading {
+      font-size: 1.25rem;
+  }
+
+  input, select, .quesField, .options input {
+      font-size: 0.85rem;
+  }
+
+  .btnCreate, .addQue {
+      font-size: 0.85rem;
+  }
+}

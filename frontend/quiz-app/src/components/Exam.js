@@ -37,8 +37,9 @@ const Exam = () => {
     <>
       <Navbar />
       <div className={ExamStyles.examMain}>
+      <h1 className={ExamStyles.heading}>Available Quizzes</h1>
         <div className={ExamStyles.examContainer}>
-          <h1 className={ExamStyles.heading}>Available Quizzes</h1>
+         
           <table className={ExamStyles.table}>
             <thead>
               <tr>
@@ -47,7 +48,14 @@ const Exam = () => {
               </tr>
             </thead>
             <tbody>
-              {quizzes.map((quiz) => (
+            {quizzes.length === 0 ? (
+              <tr>
+                <td colSpan="3" style={{ textAlign: "center" }}>
+                  No quiz found
+                </td>
+              </tr>
+            ) : (
+              quizzes.map((quiz) => (
                 <tr key={quiz._id}>
                   <td>{quiz.name}</td>
                   <td>
@@ -59,7 +67,8 @@ const Exam = () => {
                     </button>
                   </td>
                 </tr>
-              ))}
+              ))
+            )}
             </tbody>
           </table>
         </div>
