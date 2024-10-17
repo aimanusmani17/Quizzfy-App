@@ -1,164 +1,159 @@
-/* .main{
-    background-color: #2b71a4;
-    height: 100vh;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.formDiv{
-    display: flex;
-    justify-content: center;  
-    align-items: center;
-}
-
-.form{
-    width: 360px;
-  
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-    padding: 10px ;
-    border-radius: 24px;
-    background-color: #419fd3;
-    color: #ffffff;
-
-    display: flex;
-    flex-direction: column;
-   
-    padding: 10px;
-    justify-content: center; 
-    align-items: center;
-}
-
-.btn{
-    background-color: #a6e2e2; 
-    color: #000000; 
-    border: none; 
-    padding: 5px 10px; 
-    font-size: 16px; 
-    border-radius: 5px; 
-    cursor: pointer; 
-    
-    width: 30%;
-    align-items: center;
-} */
-
 /* Otp.module.css */
 
 .main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #2b71a4;
-    /* background-color: #f5f5f5; Light background */
-    padding: 20px;
-  }
-  
+  display: flex;
+  flex-direction: column; /* Ensure the heading and form stack vertically */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("../assets/quizImg/quiz-header.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px;
+}
+
+.heading {
+  text-align: center;
+  font-family: "Inika", sans-serif, bold;
+  font-size: 3rem;
+  font-weight: bolder;
+  background-image: linear-gradient(90deg, #ff8a00, #da1b60);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px; /* Space between the heading and the form */
+}
+
+.formDiv {
+  background-color: rgba(65, 159, 211, 0.7);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h6 {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.label {
+  color: #fff;
+}
+
+.otpInput {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.input {
+  width: 40px;
+  height: 40px;
+  margin: 0 5px;
+  text-align: center;
+  font-size: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.errorMessage {
+  color: #e74c3c;
+  font-size: 12px;
+}
+
+.successMessage {
+  color: #2ecc71;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+}
+
+.btn button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn button:disabled {
+  background-color: #b0c4de;
+  cursor: not-allowed;
+}
+
+.btn button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
   .formDiv {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    max-width: 400px; /* Limit max width for larger screens */
-    width: 100%; /* Full width on smaller screens */
+    padding: 20px;
+    max-width: 350px;
   }
-  
-  .form {
-    display: flex;
-    flex-direction: column;
+
+  .heading {
+    font-size: 2.5rem;
   }
-  
-  h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #333; /* Darker text for better contrast */
-    text-align: center; /* Center the title */
+
+  .input {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
   }
-  
-  h6 {
-    font-size: 14px;
-    margin-bottom: 20px;
-    color: #666; /* Lighter text color for secondary text */
-    text-align: center; /* Center the subtitle */
-  }
-  
-  .label {
-    margin-bottom: 5px;
-    color: #333; /* Label color */
-  }
-  
-  .formField {
-    padding: 10px;
-    border: 1px solid #ccc; /* Border for input */
-    border-radius: 4px;
-    margin-bottom: 10px;
-    font-size: 16px; /* Larger text for readability */
-    transition: border-color 0.3s; /* Smooth border color transition */
-  }
-  
-  .formField:focus {
-    border-color: #007bff; /* Highlight border on focus */
-    outline: none; /* Remove outline */
-  }
-  
-  .errorMessage {
-    color: #e74c3c; /* Red for error messages */
-    font-size: 12px;
-    margin-bottom: 10px;
-  }
-  
-  .successMessage {
-    color: #2ecc71; /* Green for success messages */
-    font-size: 14px;
-    margin-bottom: 10px;
-    text-align: center; /* Center success message */
-  }
-  
-  .btn {
-    display: flex;
-    justify-content: center; /* Center button */
-    margin-top: 20px;
-  }
-  
+
   .btn button {
-    padding: 10px 20px;
-    background-color: #007bff; /* Button background color */
-    color: white; /* Button text color */
-    border: none; /* Remove default border */
-    border-radius: 4px;
-    font-size: 16px; /* Increase font size */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s; /* Smooth background color transition */
+    font-size: 14px;
   }
-  
-  .btn button:disabled {
-    background-color: #b0c4de; /* Light color for disabled button */
-    cursor: not-allowed; /* Not allowed cursor for disabled state */
+}
+
+@media (max-width: 600px) {
+  .formDiv {
+    padding: 20px;
+    max-width: 300px;
   }
-  
-  .btn button:hover:not(:disabled) {
-    background-color: #0056b3; /* Darker on hover */
+
+  .heading {
+    font-size: 2rem;
   }
-  
-  /* Responsive Styles */
-  @media (max-width: 600px) {
-    .formDiv {
-      padding: 20px; /* Adjust padding for smaller screens */
-    }
-  
-    h1 {
-      font-size: 20px; /* Smaller font size for mobile */
-    }
-  
-    h6 {
-      font-size: 12px; /* Smaller font size for mobile */
-    }
-  
-    .formField {
-      font-size: 14px; /* Smaller input font size for mobile */
-    }
-  
-    .btn button {
-      font-size: 14px; /* Smaller button font size for mobile */
-    }
+
+  h6 {
+    font-size: 12px;
   }
-  
+
+  .input {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+
+  .btn button {
+    font-size: 12px;
+  }
+}
