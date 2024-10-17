@@ -158,6 +158,18 @@ const Register = () => {
    
   };
 
+  const [showPasswordMessage, setShowPasswordMessage] = useState(false); // State to toggle the message
+
+ 
+  const handleFocus = () => {
+    setShowPasswordMessage(true);
+  };
+
+  // Hide the password requirement message on blur (optional)
+  const handleBlur = () => {
+    setShowPasswordMessage(false);
+  };
+
   return (
     <div className={RegisterStyles.main}>
       <h1 className={RegisterStyles.heading}>Quizzfy</h1>
@@ -176,7 +188,15 @@ const Register = () => {
               name="name"
               value={values.name}
               onChange={handleInputChange}
+
+              onFocus={handleFocus} // Show message when input is focused
+              onBlur={handleBlur} 
             />
+             {showPasswordMessage && (
+        <p className="passwordMessage">
+          Note: Password must be 8 characters long, including 1 uppercase letter, 1 lowercase letter, and 1 special character.
+        </p>
+      )}
             {errors.name && (
               <span className={RegisterStyles.errorMessage}>{errors.name}</span>
             )}
@@ -223,7 +243,11 @@ const Register = () => {
               </span>
             )}
 
-            <br />
+            {/* <br /> */}
+            <label className={RegisterStyles.passwordNote}>
+            Note: Password must be 8 characters long, including 1 uppercase letter, 
+            1 lowercase letter, and 1 special character.
+            </label>
             <div className={RegisterStyles.btnContainer}>
               <button
                 className={RegisterStyles.Regbutton}

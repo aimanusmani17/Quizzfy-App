@@ -175,6 +175,13 @@
   border-color: #007bff;
   outline: none;
 }
+.passwordNote {
+  font-size: 12px;
+  color: #666;
+  /* margin-top: 0 auto; */
+  display: block;
+  color:#cccccc
+}
 
 .btnContainer {
   display: flex;
